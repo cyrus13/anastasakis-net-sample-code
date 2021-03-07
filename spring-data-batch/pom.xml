@@ -12,7 +12,7 @@
 		<spring.batch.version>3.0.2.RELEASE</spring.batch.version>
 		<org.springframework.boot.version>1.1.9.RELEASE</org.springframework.boot.version>
 		<org.hibernate.version>4.3.6.Final</org.hibernate.version>
-		<mysql.connector.version>5.1.33</mysql.connector.version>
+		<mysql.connector.version>8.0.16</mysql.connector.version>
 		<org.springframework.data.version>1.8.0.RELEASE</org.springframework.data.version>
 		<com.google.guava.version>18.0</com.google.guava.version>
 	</properties>
