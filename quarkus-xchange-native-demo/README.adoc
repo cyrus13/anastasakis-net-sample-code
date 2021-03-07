@@ -1,0 +1,29 @@
+This is the source code of an experiment. More details can be found on blog post:
+
+== Making it native
+
+* First build it as fast-jar
+
+----
+./gradlew clean build -Dquarkus.package.type=fast-jar
+----
+
+* Start agent to collect native references:
+----
+java -agentlib:native-image-agent=config-output-dir=./agent-lib-config -jar ./build/quarkus-app/quarkus-run.jar
+----
+
+*  Copy files from /agent-lib-config directory into: `src\resources\META-INF\native-image`
+
+* Now try to compile native and run:
+----
+./gradlew clean build -Dquarkus.package.type=fast-jar
+----
+
+=== Passing paramters to the native-image when building a quarkus build
+We can use the: `-Dquarkus.native.additional-build-args` parameter just like the following example:
+
+----
+./gradlew clean build -Dquarkus.package.type=native -Dquarkus.native.additional-build-args=--enable-url-protocols=https
+----
+
