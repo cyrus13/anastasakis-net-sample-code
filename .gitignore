@@ -6,3 +6,4 @@ spring-data-batch/.project
 spring-data-batch/.settings/
 
 spring-data-batch/target/
+/.idea/
