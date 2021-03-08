@@ -1,4 +1,4 @@
-This is the source code of an experiment. More details can be found on blog post:
+This is the source code of an experiment. More details can be found on blog post: https://kyriakos.anastasakis.net/2021/02/23/experimenting-with-quarkus-native-image-for-xchange/
 
 == Making it native
 
@@ -17,7 +17,13 @@ java -agentlib:native-image-agent=config-output-dir=./agent-lib-config -jar ./bu
 
 * Now try to compile native and run:
 ----
-./gradlew clean build -Dquarkus.package.type=fast-jar
+./gradlew clean build -Dquarkus.package.type=native
+----
+
+Note: If you are missing the GraalVM installation locally, you can still generate a native image, by adding at the end of the gradlew build the parameter: `-Dquarkus.native.container-build=true` as in:
+
+----
+./gradlew clean build -Dquarkus.package.type=native -Dquarkus.native.container-build=true
 ----
 
 === Passing paramters to the native-image when building a quarkus build

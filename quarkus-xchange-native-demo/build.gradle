@@ -13,9 +13,8 @@ dependencies {
     implementation 'io.quarkus:quarkus-rest-client-jackson'
     implementation 'io.quarkus:quarkus-rest-client'
     implementation 'io.quarkus:quarkus-resteasy'
-//    implementation 'io.quarkus:quarkus-arc'
     implementation 'org.knowm.xchange:xchange-stream-bitfinex:5.0.6'
-//    implementation 'com.github.mmazi:rescu:2.0.5-SNAPSHOT'
+    implementation 'com.github.mmazi:rescu:2.0.5-SNAPSHOT'
 
     // Added this after error message:
     implementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.14.0'
