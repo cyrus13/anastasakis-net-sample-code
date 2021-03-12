@@ -1,4 +1,4 @@
-This is the source code of an experiment. More details can be found on blog post: https://kyriakos.anastasakis.net/2021/02/23/experimenting-with-quarkus-native-image-for-xchange/
+This is the source code of an experiment. More details can be found on blog post: https://kyriakos.anastasakis.net/2021/03/13/experimenting-with-quarkus-native-image-generation-for-xchange
 
 == Making it native
 
