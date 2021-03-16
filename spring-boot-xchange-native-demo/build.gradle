@@ -1,0 +1,36 @@
+plugins {
+    id "io.freefair.lombok" version "5.3.0"
+    id 'org.springframework.boot' version '2.4.3'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+    id 'java'
+    id 'org.springframework.experimental.aot' version '0.9.0'
+    id "org.graalvm.plugin.native-image" version "0.1.0-alpha2"
+}
+
+group = 'net.anastasakis'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+    mavenLocal()
+    maven { url 'https://repo.spring.io/release' }
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.springframework.experimental:spring-native:0.9.0'
+    implementation 'org.knowm.xchange:xchange-stream-bitfinex:5.0.7-SNAPSHOT'
+    implementation group: 'com.google.guava', name: 'guava', version: '30.1-jre'
+    implementation 'com.github.mmazi:rescu:2.0.5-SNAPSHOT'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+bootBuildImage {
+    builder = 'paketobuildpacks/builder:tiny'
+    environment = ['BP_NATIVE_IMAGE': 'true']
+}
