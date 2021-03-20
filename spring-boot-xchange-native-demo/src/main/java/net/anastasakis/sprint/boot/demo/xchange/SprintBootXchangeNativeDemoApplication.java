@@ -27,7 +27,7 @@ public class SprintBootXchangeNativeDemoApplication implements CommandLineRunner
 
     @Override
     public void run(String... args) throws Exception {
-        System.out.println("Started application");
+        System.out.println("Custom message..Started application");
         ExchangeSpecification exSpec = new BitfinexExchange().getDefaultExchangeSpecification();
         Exchange bitfinex = ExchangeFactory.INSTANCE.createExchange(exSpec);
         final BitfinexMarketDataServiceRaw bitfinexMarketDataServiceRaw = (BitfinexMarketDataServiceRaw) bitfinex.getMarketDataService();

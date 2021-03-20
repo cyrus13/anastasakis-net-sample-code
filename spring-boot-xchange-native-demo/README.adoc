@@ -1,0 +1,7 @@
+== Making a Native Image through Docker
+
+```
+./gradlew clean bootBuildImage
+```
+
+Also check bootBuildImage task on Gradle.

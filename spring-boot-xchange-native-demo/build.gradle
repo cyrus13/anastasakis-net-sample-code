@@ -4,7 +4,6 @@ plugins {
     id 'io.spring.dependency-management' version '1.0.11.RELEASE'
     id 'java'
     id 'org.springframework.experimental.aot' version '0.9.0'
-    id "org.graalvm.plugin.native-image" version "0.1.0-alpha2"
 }
 
 group = 'net.anastasakis'
@@ -12,8 +11,8 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
 
 repositories {
-    mavenLocal()
     maven { url 'https://repo.spring.io/release' }
+    mavenLocal()
     mavenCentral()
 }
 
@@ -34,3 +33,4 @@ bootBuildImage {
     builder = 'paketobuildpacks/builder:tiny'
     environment = ['BP_NATIVE_IMAGE': 'true']
 }
+

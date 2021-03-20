@@ -1,11 +1,8 @@
 package net.anastasakis.sprint.boot.demo.xchange;
 
 import lombok.Data;
-import lombok.Singular;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.context.properties.ConstructorBinding;
-
-import java.util.List;
 
 @Data
 @ConstructorBinding
