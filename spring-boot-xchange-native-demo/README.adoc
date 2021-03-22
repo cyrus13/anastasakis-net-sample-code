@@ -1,7 +1,42 @@
+== Run in JVM
+First compile
+```
+./mvnw clean package
+```
+
+Then execute:
+```
+java -jar ./target/spring-boot-xchange-native-demo-maven-0.0.1-SNAPSHOT.jar
+```
+
+== Local Native Image compilation
+This steps assumes your JAVA_HOME points to the GraalVM installation on your machine with native-image support (gu install...)
+
+First compile natively:
+```
+./mvnw clean -Pnative-image package "-DbuildArgs=--enable-url-protocols=https"
+```
+
+Then execute natively:
+```
+./target/net.anastasakis.spring.boot.demo.xchange.springbootxchangenativedemoapplication
+```
+
 == Making a Native Image through Docker
-
+Need to pass this parameter to maven spring-boot plugin (see pom.xml)
 ```
-./gradlew clean bootBuildImage
+ <BP_NATIVE_IMAGE_BUILD_ARGUMENTS>--enable-url-protocols=https</BP_NATIVE_IMAGE_BUILD_ARGUMENTS>
 ```
 
-Also check bootBuildImage task on Gradle.
+Then we can build the image
+```
+./mvnw clean spring-boot:build-image
+```
+
+== Executing the image Native Image through Docker
+```
+docker run -it spring-boot-xchange-native-demo-maven:0.0.1-SNAPSHOT
+```
+
+== Spring Native Documentation Page
+https://docs.spring.io/spring-native/docs/current/reference/htmlsingle

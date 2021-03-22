@@ -1,4 +1,4 @@
-package net.anastasakis.sprint.boot.demo.xchange;
+package net.anastasakis.spring.boot.demo.xchange;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;

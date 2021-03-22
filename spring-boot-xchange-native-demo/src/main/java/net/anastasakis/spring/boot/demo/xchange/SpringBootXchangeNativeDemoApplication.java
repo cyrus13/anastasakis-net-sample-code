@@ -1,4 +1,4 @@
-package net.anastasakis.sprint.boot.demo.xchange;
+package net.anastasakis.spring.boot.demo.xchange;
 
 import org.knowm.xchange.Exchange;
 import org.knowm.xchange.ExchangeFactory;
@@ -10,16 +10,13 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.context.annotation.Bean;
-
-import java.util.Arrays;
 
 @SpringBootApplication
 @EnableConfigurationProperties({XChangeProperties.class})
-public class SprintBootXchangeNativeDemoApplication implements CommandLineRunner{
+public class SpringBootXchangeNativeDemoApplication implements CommandLineRunner{
 
     public static void main(String[] args) {
-        SpringApplication.run(SprintBootXchangeNativeDemoApplication.class, args);
+        SpringApplication.run(SpringBootXchangeNativeDemoApplication.class, args);
     }
 
     @Autowired
