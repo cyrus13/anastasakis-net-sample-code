@@ -14,7 +14,7 @@
 		<org.hibernate.version>4.3.6.Final</org.hibernate.version>
 		<mysql.connector.version>8.0.16</mysql.connector.version>
 		<org.springframework.data.version>1.11.22.RELEASE</org.springframework.data.version>
-		<com.google.guava.version>24.1.1-jre</com.google.guava.version>
+		<com.google.guava.version>29.0-jre</com.google.guava.version>
 	</properties>
 	<dependencies>
 		<dependency>
