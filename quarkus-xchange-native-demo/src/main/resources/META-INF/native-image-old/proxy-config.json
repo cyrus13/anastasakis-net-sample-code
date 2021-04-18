@@ -1,0 +1,4 @@
+[
+  ["org.knowm.xchange.bitfinex.v1.BitfinexAuthenticated"],
+  ["org.knowm.xchange.bitfinex.v2.BitfinexAuthenticated"]
+]

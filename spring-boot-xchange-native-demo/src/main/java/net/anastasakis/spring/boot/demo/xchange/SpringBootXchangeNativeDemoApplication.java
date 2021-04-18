@@ -10,14 +10,16 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.context.annotation.Profile;
 
+@Profile("classical")
 @SpringBootApplication
 @EnableConfigurationProperties({XChangeProperties.class})
 public class SpringBootXchangeNativeDemoApplication implements CommandLineRunner{
 
-    public static void main(String[] args) {
-        SpringApplication.run(SpringBootXchangeNativeDemoApplication.class, args);
-    }
+//    public static void main(String[] args) {
+//        SpringApplication.run(SpringBootXchangeNativeDemoApplication.class, args);
+//    }
 
     @Autowired
     private XChangeProperties xChangeProperties;

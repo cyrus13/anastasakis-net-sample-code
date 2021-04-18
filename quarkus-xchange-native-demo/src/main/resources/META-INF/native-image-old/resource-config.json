@@ -1,0 +1,13 @@
+{
+  "resources":{
+  "includes":[
+    {"pattern":"\\QMETA-INF/services/io.smallrye.config.ConfigSourceFactory\\E"}, 
+    {"pattern":"\\QMETA-INF/services/io.smallrye.config.SmallRyeConfigFactory\\E"}, 
+    {"pattern":"\\QMETA-INF/services/io.vertx.core.spi.FutureFactory\\E"}, 
+    {"pattern":"\\Qapplication.properties\\E"},
+    {"pattern":"\\Qbitfinex.json\\E"}, 
+    {"pattern":"\\Qorg/jboss/threads/Version.properties\\E"}, 
+    {"pattern":"\\Qorg/slf4j/impl/StaticLoggerBinder.class\\E"}
+  ]},
+  "bundles":[]
+}

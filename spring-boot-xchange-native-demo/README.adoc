@@ -9,6 +9,15 @@ Then execute:
 java -jar ./target/spring-boot-xchange-native-demo-maven-0.0.1-SNAPSHOT.jar
 ```
 
+== Generate the Agent Lib Config
+First build the application for JVM as above to create a jar file. Then:
+
+```
+java -agentlib:native-image-agent=config-output-dir=./agent-lib-config -jar ./target/spring-boot-xchange-native-demo-maven-0.0.1-SNAPSHOT.jar
+```
+
+Copy the directory to: resources\META-INF\native-image
+
 == Local Native Image compilation
 This steps assumes your JAVA_HOME points to the GraalVM installation on your machine with native-image support (gu install...)
 
@@ -35,8 +44,20 @@ Then we can build the image
 
 == Executing the image Native Image through Docker
 ```
-docker run -it spring-boot-xchange-native-demo-maven:0.0.1-SNAPSHOT
+docker run --rm -it spring-boot-xchange-native-demo-maven:0.0.1-SNAPSHOT
 ```
+
+== Test Copy Contents from Image (if we are on windows/macos)
+```
+docker create spring-boot-xchange-native-demo-maven:0.0.1-SNAPSHOT
+```
+
+Get the generated image ID from the previous image
+```
+docker cp 2dce1042324f32e94829b7697283ea02d6d05c5984bd0bf90b863af563bed6ca:/workspace /tmp
+```
+
+Get the file and upload it
 
 == Spring Native Documentation Page
 https://docs.spring.io/spring-native/docs/current/reference/htmlsingle
